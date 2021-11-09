@@ -13,10 +13,12 @@ const API_URL = "https://api.thecatapi.com/v1/images/search";
 const button = document.querySelector("#button");
 const catImage = document.querySelector("#cat");
 
-button.addEventListener("click", async (event) => {
+button.addEventListener("click",
+  async () => {
+    // event.preventDefault();
+    const response = await fetch(API_URL, { headers: { "x-api-key": API_KEY } });
+    const data = await response.json();
+    catImage.src = data[0].url;
+  }
+)
 
-  // event.preventDefault();
-  const response = await fetch(API_URL, { headers: { "x-api-key": API_KEY } });
-  const data = await response.json();
-  catImage.src = data[0].url;
-})
