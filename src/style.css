@@ -14,8 +14,11 @@
 }
 
 img {
+  display: flex;
   max-width: 90%;
-  height: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  margin: 70px 5px;
 }
 
 .hidden {
@@ -24,7 +27,10 @@ img {
 
 /* Button styles */
 .button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin-top: 5px;
     width: 220px;
     height: 60px;
     border: 2px solid #fff;
