@@ -1,98 +1,69 @@
-.container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c3e50;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    width: 220px;
+    height: 60px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 56px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+    transition: all ease 0.5s;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: rotate 1.4s ease 0.5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+  transform: rotate(360deg) ;
+  }
+}
+
+@keyframes bounce {
+  0% {
+      transform: scale(0.9);
+  }
+}
+
 img {
-    max-width: 100%;
-    height: auto;
-}
-
-.preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 3;
-  transition: 1s all;
-  opacity: 1;
-  visibility: visible;
-}
-.preloader .demo {
-  
-    width: 100px;
-    height: 102px;
-    border-radius: 100%;
-    position: absolute;
-    top: 45%;
-    left: calc(50% - 50px);
-}
-.preloader.done {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.circle {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.circle .inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 5px solid rgba(0, 255, 170, 0.7);
-  border-right: none;
-  border-top: none;
-  background-clip: padding;
-  box-shadow: inset 0px 0px 10px rgba(0, 255, 170, 0.15);
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.circle:nth-of-type(0) {
-  transform: rotate(0deg);
-}
-.circle:nth-of-type(0) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
-}
-
-.circle:nth-of-type(1) {
-  transform: rotate(70deg);
-}
-.circle:nth-of-type(1) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
-}
-
-.circle:nth-of-type(2) {
-  transform: rotate(140deg);
-}
-.circle:nth-of-type(2) .inner {
-  -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
-}
-
-.demo {
-  -webkit-animation: spin 5s infinite linear;
-          animation: spin 5s infinite linear;
+    max-width: 90%;
+    height: 90%;
 }
