@@ -1,1 +1,3 @@
-# show_me_the_cat
+# Show me the cat.
+
+## little mood booster app
